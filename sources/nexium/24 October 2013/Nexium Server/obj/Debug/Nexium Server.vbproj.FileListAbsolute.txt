@@ -1,0 +1,10 @@
+C:\Users\Administrator\Downloads\SRC\VB.net\aeonhack-nexium-4e1c90d28c3d\Nexium Server\bin\Debug\Nexium Server.exe
+C:\Users\Administrator\Downloads\SRC\VB.net\aeonhack-nexium-4e1c90d28c3d\Nexium Server\bin\Debug\Nexium Server.pdb
+C:\Users\Administrator\Downloads\SRC\VB.net\aeonhack-nexium-4e1c90d28c3d\Nexium Server\bin\Debug\Nexium Server.xml
+C:\Users\Administrator\Downloads\SRC\VB.net\aeonhack-nexium-4e1c90d28c3d\Nexium Server\obj\Debug\Interop.NATUPNPLib.dll
+C:\Users\Administrator\Downloads\SRC\VB.net\aeonhack-nexium-4e1c90d28c3d\Nexium Server\obj\Debug\Nexium Server.vbproj.ResolveComReference.cache
+C:\Users\Administrator\Downloads\SRC\VB.net\aeonhack-nexium-4e1c90d28c3d\Nexium Server\obj\Debug\Resources.resources
+C:\Users\Administrator\Downloads\SRC\VB.net\aeonhack-nexium-4e1c90d28c3d\Nexium Server\obj\Debug\Nexium Server.vbproj.GenerateResource.Cache
+C:\Users\Administrator\Downloads\SRC\VB.net\aeonhack-nexium-4e1c90d28c3d\Nexium Server\obj\Debug\Nexium Server.exe
+C:\Users\Administrator\Downloads\SRC\VB.net\aeonhack-nexium-4e1c90d28c3d\Nexium Server\obj\Debug\Nexium Server.xml
+C:\Users\Administrator\Downloads\SRC\VB.net\aeonhack-nexium-4e1c90d28c3d\Nexium Server\obj\Debug\Nexium Server.pdb

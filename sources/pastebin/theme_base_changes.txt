@@ -1,0 +1,87 @@
+1.5.4 Changes
+-Added ValueHex to Bloom structure. Now when changing colors you can get/set an HTML color, alpha must be changed manually though.
+-Added animation support, please handle logic in the overridable OnAnimation method.
+-Added the protected IsAnimated property to enabled/disable animation.
+-FormStartPosition should now be correctly applied when set to CenterScreen.
+-Added CreateRound method for creating rounded rectangles, returns a GraphicsPath.
+-Fixed a bug where the parent changing it's handle could cause resizing and movement to stop working. ShowInTaskbar for instance.
+
+
+1.5.3 Changes
+-Changed the way the Colors property was storing each individual bloom, now it relies soley on the Customization code.
+-Added GetPen and GetBrush methods which function the same as GetColor.
+-Added DrawCorners overloads that supports an offset, similar to the DrawBorders method.
+-Added DrawPixel method which takes a color, x, and y parameters.
+-Cleaned up method overloads - DrawCorners, DrawBorders, DrawText, DrawImage, DrawGradient, Center.
+-Removed StringFormat from Measure method, it caused some things to align strangely.
+-Slightly optimized overloads so that (in most cases) they should no longer chain through more then 2 methods.
+-Cleaned up and added some regions for better readability.
+-DrawImage and DrawText will no longer center in the middle of the control while in ControlMode. Set the Header property to determine Y position.
+-Renamed MoveHeight to Header, since it also determines the alignment of DrawText and DrawImage when in ControlMode.
+-ThemeContainer, while in control mode now supports the Transparent property.
+-Added Offset method which will resize/reposition rectangles, sizes, and points based on an offset value.
+-Changed the Transparent bitmap buffer to use premultiplied ARGB for better performance.
+-Added DrawRadial method for drawing radial gradients and standard gradients in an ellipse.
+-Note: DrawRadial(blend, ..) while using G.SmoothingMode.AntiAlias will offset the shape by 1 pixel inwards.
+
+
+1.5.2 Changes
+-Changed how the BackColor property was handled, strangely.
+-Moved some code over from OnHandleCreated to OnParentChanged to address some unforseen bugs.
+-OnCreation will now be called after OnParentChanged so you may always safely reference the parent.
+-Fixed a bug where a maximized theme would show resizing arrows.
+-Added SmartBounds property which will ensure the theme is always visible in MDI forms or the Windows desktop.
+-Added protected property IsParentMdi to determine if the parent is an MDI host.
+-ThemeContainer while not in ControlMode, now forces DockStyle.Fill while in design mode.
+-Setting the FormBorderStyle property to anything but None will now automatically set Movable and Sizable to false. These values are not locked.
+-Fixed a bug where in some cases mouse up would not change the current theme State (MouseState).
+-Changing the BackColor or TransparencyKey properties will now call the ColorHook.
+-Fixed a bug where setting the Minimum/Maximum size would not correctly prevent sizing.
+-Minimum and Maximum sizes will now proxy the parent controls properties.
+-Changed ThemeControl OnHandleCreated's scope to NotOverridable as intended. Use OnCreation instead.
+-DrawImage and DrawText will now center in the entire control space as opposed to the header space while in control mode.
+-Fixed a bug where the state of a control would get 'stuck' in MouseState.Over. (Thanks ki113d)
+-Moved BackColor into the Misc category along with all of the other properties, such as Colors.
+-Renamed SetColor 'color' parameter to 'value' to make conversion process to C# easier.
+
+
+1.5.1 Changes
+-Corrected a spelling error with the Customization property. (Thanks xZ3ROxPROJ3CTx)
+-Added the overridable method 'OnCreation' which is called after OnHandleCreated.
+-Changed the default font to Verdana 8pt.
+-Setting the theme BackColor will now change it's parent's BackColor. This will make flickering less noticable.
+-Fixed a bug where moving over a child control with a resize cursor wouldn't invalidate the cursor to default.
+-Changed the scope of the MoveHeight and ImageSize properties to protected, they can no longer be accessed by the user.
+-Exposed the read-only IsParentForm property, which returns a boolean indicating whether or not the parent container is a form.
+-Converted the LockHeight and LockWidth methods to protected properties.
+-Added ControlMode property to the ThemeContainer class. This way you can make things such as group boxes and tab controls.
+-Appended 151 to the end of the ThemeContainer and ThemeControl class names, to represent the version. This will be the case in all future updates.
+-Changed various hidden properties to return their empty values instead of null. This helps when converting from VB.NET to C#.
+-Fixed bug where ImageSize property would return itself instead of it's private member.
+
+
+1.5.0 Changes
+-Optimized mouse handling when resizing or moving the form.
+-Fixed bug where DrawIcon would render in incorrect dimensions causing distortion.
+-DrawIcon has been renamed to DrawImage.
+-Added Transparent property, allowing transparent background colors.
+-Added smart buffer where code will run much faster if the Transparent property is set to false.
+-Added Colors property and ColorHook to wire said colors to color, pen, brush, etc objects.
+-Added Custimization property that will generate a code representing the current colors for easy sharing.
+-Added LockWidth and LockHeight methods preventing the user from changing dimensions.
+-DrawBorders now only draws a single line but supports an offset parameter if you wish to draw additional lines.
+-Added many new method overloads to DrawText, DrawImage, DrawGradient, DrawBorders, and DrawCorners.
+-New MouseState '.Block' for disabled controls.
+-Added Center method which will center sizes and rectangles within eachother (tons of overloads).
+-Added Measure method to measure the current text or any specified text with the current font. Return a size object.
+-Some unused properties are now hidden to help with clutter in the properties pane. (ForeColor, BackgroundImage, -BackgroundImageLayout)
+-Changing the Font or MoveHeight properties will now cause invalidation, refreshing your control.
+-Added ImageSize property which will return Size.Empty if the Image is null or the image dimensions if otherwise.
+-Added MouseState to ThemeContainer.
+-Added Movable property to ThemeContainer.
+-ThemeContainer no longer forces FromBoderStyle.None, so the default windows title bar and borders can be used.
+-Predefined offsets are no longer applied to DrawText and DrawImage.
+-ThemeContainer will no longer swallow the OnMouseDown and OnSizeChanged calls.
+-Removed a conditional check on the SizeChanged method which should provide a minimal performance increase.
+-Changes have been made to fully support Visual Studio 2008.
+-Changed variable MouseState to State, and the enumerable 'State' to 'MouseState'. (confusing huh?)

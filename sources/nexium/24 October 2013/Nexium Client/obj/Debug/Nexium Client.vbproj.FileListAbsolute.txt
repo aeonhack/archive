@@ -1,0 +1,13 @@
+C:\Users\Administrator\Downloads\SRC\VB.net\aeonhack-nexium-4e1c90d28c3d\Nexium Client\bin\Debug\Nexium Client.exe
+C:\Users\Administrator\Downloads\SRC\VB.net\aeonhack-nexium-4e1c90d28c3d\Nexium Client\bin\Debug\Nexium Client.pdb
+C:\Users\Administrator\Downloads\SRC\VB.net\aeonhack-nexium-4e1c90d28c3d\Nexium Client\bin\Debug\Nexium Client.xml
+C:\Users\Administrator\Downloads\SRC\VB.net\aeonhack-nexium-4e1c90d28c3d\Nexium Client\obj\Debug\UserPreview.resources
+C:\Users\Administrator\Downloads\SRC\VB.net\aeonhack-nexium-4e1c90d28c3d\Nexium Client\obj\Debug\AddChannel.resources
+C:\Users\Administrator\Downloads\SRC\VB.net\aeonhack-nexium-4e1c90d28c3d\Nexium Client\obj\Debug\MyAccount.resources
+C:\Users\Administrator\Downloads\SRC\VB.net\aeonhack-nexium-4e1c90d28c3d\Nexium Client\obj\Debug\ClientMain.resources
+C:\Users\Administrator\Downloads\SRC\VB.net\aeonhack-nexium-4e1c90d28c3d\Nexium Client\obj\Debug\Resources.resources
+C:\Users\Administrator\Downloads\SRC\VB.net\aeonhack-nexium-4e1c90d28c3d\Nexium Client\obj\Debug\ServerPreview.resources
+C:\Users\Administrator\Downloads\SRC\VB.net\aeonhack-nexium-4e1c90d28c3d\Nexium Client\obj\Debug\Nexium Client.vbproj.GenerateResource.Cache
+C:\Users\Administrator\Downloads\SRC\VB.net\aeonhack-nexium-4e1c90d28c3d\Nexium Client\obj\Debug\Nexium Client.exe
+C:\Users\Administrator\Downloads\SRC\VB.net\aeonhack-nexium-4e1c90d28c3d\Nexium Client\obj\Debug\Nexium Client.xml
+C:\Users\Administrator\Downloads\SRC\VB.net\aeonhack-nexium-4e1c90d28c3d\Nexium Client\obj\Debug\Nexium Client.pdb

@@ -1,0 +1,15 @@
+﻿Version: 1.3 (Aeonhack's Revision)
+
+-Replace timer scanning with FileSystemWatcher
+-Added categories
+-Added tab control for different categories
+-Replaced listbox with listview
+-Changed backcolor of textbox to "Window" color for easier reading
+-Removed settings form, no longer needed
+-Add support for the ctrl+a shortcut to select all text
+-Added context menus for create, rename, delete, and open (thanks Scout)
+-Replaced... menustrip? with toolstrip
+-Added maximize and minimize buttons in the control box
+-Added settings: word wrap, status strip, list font, and document font
+-Added import option
+
