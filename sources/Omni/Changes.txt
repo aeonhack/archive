@@ -1,0 +1,17 @@
+﻿Version: 2.3.0.0
+-Removed downloader class, use System.Net.WebClient instead.
+-Added Storage class, intended for helping with serialization across assemblies.
+-Added Check.Password overload, not providing a minimum length now return the score.
+-Renamed Net to Nexus due to conflicting names with the System.Net namespace.
+-Renamed Math to Stats due to conflicting names with the System.Math namespace.
+-Added socket Server and Client classes to the Nexus class.
+-Added Clone function to the General class, enabling deep cloning of any serializeable object.
+-Added Raise method to the General class, allowing events to be raised cross-thread.
+-Optimized Core.Root function reducing it to 1 line instead of 14.
+-Added null check to Nexus.Client.Connected property.
+-Forced Nexus.Server to append new connections before raising Status event, connection is removed if denied.
+-Removed Try-Catch block on General.Raise method.
+-Moved Hexadecimal function from Shift.Matrix to Shift.
+-Implemented DirectCast instead of CType and Type checking on General.Raise function for perforamance boosts.
+-Made Hash and HashFile return hash values in the same string format.
+-Add General.Media class to play audio files that installed codecs support.

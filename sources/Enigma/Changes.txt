@@ -1,0 +1,14 @@
+﻿Version: 1.1.0.0
+-Fixed progressbar error, strength was returning values over 100.
+-Added validation to passwords. If number and letter is check all passwords will contain both.
+-Set minimum password length to 3. Preventing an infinite loop if 3 options are set and 2 length was used.
+
+Version: 1.1.0.1
+-Used updated seeding function resulting in even more unique passwords.
+
+Version: 1.2
+-Added button to lowercase the current password.
+-Added button to save the current password.
+-Added option to hide the current password for users wanting to test their own passwords strength.
+-Decreased font size on labels from 8 to 7.
+-Interface changes allowed maximum password size to increase from 20 to 28.

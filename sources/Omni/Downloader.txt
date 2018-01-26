@@ -1,0 +1,35 @@
+﻿    Class Downloader
+        Event Changed(ByVal sender As Object, ByVal e As UpdateEvent) : Event Starting(ByVal sender As Object, ByVal e As UpdateEvent)
+        Event Complete(ByVal sender As Object, ByVal e As UpdateEvent) : Event Failed(ByVal sender As Object, ByVal e As ErrorEventArgs)
+        Private Reader As Stream, Writer As FileStream, Data(512) As Byte, File As String, Maximum, Current As Long
+        Sub Download(ByVal link As String, ByVal folder As String)
+            File = Path.Combine(folder, link.Remove(0, link.LastIndexOf("/") + 1).Replace("%20", " "))
+            Writer = New FileStream(File, FileMode.Create, FileAccess.Write)
+            Dim T = WebRequest.Create(link) : T.BeginGetResponse(AddressOf DoResponse, T)
+        End Sub
+        Sub Cancel()
+            Writer.Close() : Reader.Close() : Current = 0
+        End Sub
+        Sub DoResponse(ByVal r As IAsyncResult)
+            Try
+                Dim T = r.AsyncState.EndGetResponse(r)
+                Maximum = T.ContentLength : Reader = T.GetResponseStream
+                Raise(StartingEvent, New Object() {Me, New UpdateEvent(File, 0, Maximum)})
+                Reader.BeginRead(Data, 0, Data.Length, AddressOf DoStream, 0)
+            Catch e As Exception : Fail(e) : End Try
+        End Sub
+        Sub DoStream(ByVal r As IAsyncResult)
+            Try
+                Dim I = Reader.EndRead(r) : If I > 0 Then
+                    Writer.Write(Data, 0, I) : Current += I
+                    Raise(ChangedEvent, New Object() {Me, New UpdateEvent(File, Current, Maximum)})
+                    Reader.BeginRead(Data, 0, Data.Length, AddressOf DoStream, 0)
+                Else
+                    Cancel() : Raise(CompleteEvent, New Object() {Me, New UpdateEvent(File, Maximum, Maximum)})
+                End If
+            Catch e As Exception : If Current > 0 Then : Fail(e) : End If : End Try
+        End Sub
+        Private Sub Fail(ByVal e As Exception)
+            Try : Cancel() : IO.File.Delete(File) : Catch : End Try : Raise(FailedEvent, New Object() {Me, New ErrorEventArgs(e)})
+        End Sub
+    End Class

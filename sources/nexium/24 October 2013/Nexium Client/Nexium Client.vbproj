@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F47B0B2C-EDE4-4D8C-AE86-A4186AF26B08}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>My.MyApplication</StartupObject>
+    <RootNamespace>
+    </RootNamespace>
+    <AssemblyName>Nexium Client</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Nexium Client.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Nexium Client.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>Off</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Shared Code\CryptoHelper.vb">
+      <Link>Shared Code\CryptoHelper.vb</Link>
+    </Compile>
+    <Compile Include="..\Shared Code\Protocol.vb">
+      <Link>Shared Code\Protocol.vb</Link>
+    </Compile>
+    <Compile Include="..\Shared Code\Serializer.vb">
+      <Link>Shared Code\Serializer.vb</Link>
+    </Compile>
+    <Compile Include="..\Shared Code\SettingsHelper.vb">
+      <Link>Shared Code\SettingsHelper.vb</Link>
+    </Compile>
+    <Compile Include="..\Shared Code\StringHandler.vb">
+      <Link>Shared Code\StringHandler.vb</Link>
+    </Compile>
+    <Compile Include="..\Shared Code\WebConnector.vb">
+      <Link>Shared Code\WebConnector.vb</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClientPacketHandlers.vb" />
+    <Compile Include="ClientPacketSenders.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\BufferedClient.vb" />
+    <Compile Include="Controls\BetterRichTextBox.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Recaptcha.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\UserPreview.Designer.vb">
+      <DependentUpon>UserPreview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UserPreview.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClientCore.vb" />
+    <Compile Include="Dialogs\AddChannel.Designer.vb">
+      <DependentUpon>AddChannel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\AddChannel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\MyAccount.Designer.vb">
+      <DependentUpon>MyAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\MyAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientMain.Designer.vb">
+      <DependentUpon>ClientMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\HiddenTab.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Controls\Seperator.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ServerPreview.Designer.vb">
+      <DependentUpon>ServerPreview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ServerPreview.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Utilities\IdleMonitor.vb" />
+    <Compile Include="Utilities\NativeMethods.vb" />
+    <Compile Include="Utilities\ServerEndpoint.vb" />
+    <Compile Include="Utilities\User.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\UserPreview.resx">
+      <DependentUpon>UserPreview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddChannel.resx">
+      <DependentUpon>AddChannel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MyAccount.resx">
+      <DependentUpon>MyAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientMain.resx">
+      <DependentUpon>ClientMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ServerPreview.resx">
+      <DependentUpon>ServerPreview.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notify.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Images\leftTribal.png" />
+    <Content Include="Resources\Images\privateServer.png" />
+    <Content Include="Resources\Images\publicServer.png" />
+    <Content Include="Resources\Images\rightTribal.png" />
+    <EmbeddedResource Include="Resources\Ranks\r1.png" />
+    <EmbeddedResource Include="Resources\Ranks\r10.png" />
+    <EmbeddedResource Include="Resources\Ranks\r100.png" />
+    <EmbeddedResource Include="Resources\Ranks\r101.png" />
+    <EmbeddedResource Include="Resources\Ranks\r102.png" />
+    <EmbeddedResource Include="Resources\Ranks\r103.png" />
+    <EmbeddedResource Include="Resources\Ranks\r104.png" />
+    <EmbeddedResource Include="Resources\Ranks\r105.png" />
+    <EmbeddedResource Include="Resources\Ranks\r106.png" />
+    <EmbeddedResource Include="Resources\Ranks\r107.png" />
+    <EmbeddedResource Include="Resources\Ranks\r108.png" />
+    <EmbeddedResource Include="Resources\Ranks\r109.png" />
+    <EmbeddedResource Include="Resources\Ranks\r11.png" />
+    <EmbeddedResource Include="Resources\Ranks\r110.png" />
+    <EmbeddedResource Include="Resources\Ranks\r111.png" />
+    <EmbeddedResource Include="Resources\Ranks\r112.png" />
+    <EmbeddedResource Include="Resources\Ranks\r113.png" />
+    <EmbeddedResource Include="Resources\Ranks\r114.png" />
+    <EmbeddedResource Include="Resources\Ranks\r115.png" />
+    <EmbeddedResource Include="Resources\Ranks\r116.png" />
+    <EmbeddedResource Include="Resources\Ranks\r117.png" />
+    <EmbeddedResource Include="Resources\Ranks\r118.png" />
+    <EmbeddedResource Include="Resources\Ranks\r119.png" />
+    <EmbeddedResource Include="Resources\Ranks\r12.png" />
+    <EmbeddedResource Include="Resources\Ranks\r120.png" />
+    <EmbeddedResource Include="Resources\Ranks\r121.png" />
+    <EmbeddedResource Include="Resources\Ranks\r122.png" />
+    <EmbeddedResource Include="Resources\Ranks\r123.png" />
+    <EmbeddedResource Include="Resources\Ranks\r13.png" />
+    <EmbeddedResource Include="Resources\Ranks\r14.png" />
+    <EmbeddedResource Include="Resources\Ranks\r15.png" />
+    <EmbeddedResource Include="Resources\Ranks\r16.png" />
+    <EmbeddedResource Include="Resources\Ranks\r17.png" />
+    <EmbeddedResource Include="Resources\Ranks\r18.png" />
+    <EmbeddedResource Include="Resources\Ranks\r19.png" />
+    <EmbeddedResource Include="Resources\Ranks\r2.png" />
+    <EmbeddedResource Include="Resources\Ranks\r20.png" />
+    <EmbeddedResource Include="Resources\Ranks\r21.png" />
+    <EmbeddedResource Include="Resources\Ranks\r22.png" />
+    <EmbeddedResource Include="Resources\Ranks\r23.png" />
+    <EmbeddedResource Include="Resources\Ranks\r24.png" />
+    <EmbeddedResource Include="Resources\Ranks\r25.png" />
+    <EmbeddedResource Include="Resources\Ranks\r26.png" />
+    <EmbeddedResource Include="Resources\Ranks\r27.png" />
+    <EmbeddedResource Include="Resources\Ranks\r28.png" />
+    <EmbeddedResource Include="Resources\Ranks\r29.png" />
+    <EmbeddedResource Include="Resources\Ranks\r3.png" />
+    <EmbeddedResource Include="Resources\Ranks\r30.png" />
+    <EmbeddedResource Include="Resources\Ranks\r31.png" />
+    <EmbeddedResource Include="Resources\Ranks\r32.png" />
+    <EmbeddedResource Include="Resources\Ranks\r33.png" />
+    <EmbeddedResource Include="Resources\Ranks\r34.png" />
+    <EmbeddedResource Include="Resources\Ranks\r35.png" />
+    <EmbeddedResource Include="Resources\Ranks\r36.png" />
+    <EmbeddedResource Include="Resources\Ranks\r37.png" />
+    <EmbeddedResource Include="Resources\Ranks\r38.png" />
+    <EmbeddedResource Include="Resources\Ranks\r39.png" />
+    <EmbeddedResource Include="Resources\Ranks\r4.png" />
+    <EmbeddedResource Include="Resources\Ranks\r40.png" />
+    <EmbeddedResource Include="Resources\Ranks\r41.png" />
+    <EmbeddedResource Include="Resources\Ranks\r42.png" />
+    <EmbeddedResource Include="Resources\Ranks\r43.png" />
+    <EmbeddedResource Include="Resources\Ranks\r44.png" />
+    <EmbeddedResource Include="Resources\Ranks\r45.png" />
+    <EmbeddedResource Include="Resources\Ranks\r46.png" />
+    <EmbeddedResource Include="Resources\Ranks\r47.png" />
+    <EmbeddedResource Include="Resources\Ranks\r48.png" />
+    <EmbeddedResource Include="Resources\Ranks\r49.png" />
+    <EmbeddedResource Include="Resources\Ranks\r5.png" />
+    <EmbeddedResource Include="Resources\Ranks\r50.png" />
+    <EmbeddedResource Include="Resources\Ranks\r51.png" />
+    <EmbeddedResource Include="Resources\Ranks\r52.png" />
+    <EmbeddedResource Include="Resources\Ranks\r53.png" />
+    <EmbeddedResource Include="Resources\Ranks\r54.png" />
+    <EmbeddedResource Include="Resources\Ranks\r55.png" />
+    <EmbeddedResource Include="Resources\Ranks\r56.png" />
+    <EmbeddedResource Include="Resources\Ranks\r57.png" />
+    <EmbeddedResource Include="Resources\Ranks\r58.png" />
+    <EmbeddedResource Include="Resources\Ranks\r59.png" />
+    <EmbeddedResource Include="Resources\Ranks\r6.png" />
+    <EmbeddedResource Include="Resources\Ranks\r60.png" />
+    <EmbeddedResource Include="Resources\Ranks\r61.png" />
+    <EmbeddedResource Include="Resources\Ranks\r62.png" />
+    <EmbeddedResource Include="Resources\Ranks\r63.png" />
+    <EmbeddedResource Include="Resources\Ranks\r64.png" />
+    <EmbeddedResource Include="Resources\Ranks\r65.png" />
+    <EmbeddedResource Include="Resources\Ranks\r66.png" />
+    <EmbeddedResource Include="Resources\Ranks\r67.png" />
+    <EmbeddedResource Include="Resources\Ranks\r68.png" />
+    <EmbeddedResource Include="Resources\Ranks\r69.png" />
+    <EmbeddedResource Include="Resources\Ranks\r7.png" />
+    <EmbeddedResource Include="Resources\Ranks\r70.png" />
+    <EmbeddedResource Include="Resources\Ranks\r71.png" />
+    <EmbeddedResource Include="Resources\Ranks\r72.png" />
+    <EmbeddedResource Include="Resources\Ranks\r73.png" />
+    <EmbeddedResource Include="Resources\Ranks\r74.png" />
+    <EmbeddedResource Include="Resources\Ranks\r75.png" />
+    <EmbeddedResource Include="Resources\Ranks\r76.png" />
+    <EmbeddedResource Include="Resources\Ranks\r77.png" />
+    <EmbeddedResource Include="Resources\Ranks\r78.png" />
+    <EmbeddedResource Include="Resources\Ranks\r79.png" />
+    <EmbeddedResource Include="Resources\Ranks\r8.png" />
+    <EmbeddedResource Include="Resources\Ranks\r80.png" />
+    <EmbeddedResource Include="Resources\Ranks\r81.png" />
+    <EmbeddedResource Include="Resources\Ranks\r82.png" />
+    <EmbeddedResource Include="Resources\Ranks\r83.png" />
+    <EmbeddedResource Include="Resources\Ranks\r84.png" />
+    <EmbeddedResource Include="Resources\Ranks\r85.png" />
+    <EmbeddedResource Include="Resources\Ranks\r86.png" />
+    <EmbeddedResource Include="Resources\Ranks\r87.png" />
+    <EmbeddedResource Include="Resources\Ranks\r88.png" />
+    <EmbeddedResource Include="Resources\Ranks\r89.png" />
+    <EmbeddedResource Include="Resources\Ranks\r9.png" />
+    <EmbeddedResource Include="Resources\Ranks\r90.png" />
+    <EmbeddedResource Include="Resources\Ranks\r91.png" />
+    <EmbeddedResource Include="Resources\Ranks\r92.png" />
+    <EmbeddedResource Include="Resources\Ranks\r93.png" />
+    <EmbeddedResource Include="Resources\Ranks\r94.png" />
+    <EmbeddedResource Include="Resources\Ranks\r95.png" />
+    <EmbeddedResource Include="Resources\Ranks\r96.png" />
+    <EmbeddedResource Include="Resources\Ranks\r97.png" />
+    <EmbeddedResource Include="Resources\Ranks\r98.png" />
+    <EmbeddedResource Include="Resources\Ranks\r99.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

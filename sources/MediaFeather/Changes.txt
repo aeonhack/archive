@@ -1,0 +1,6 @@
+﻿Version 1.1:
+-Implemented updated shortcut class, no longer requires ID.
+-Added option to adjust system sounds instead of player sounds.
+-Fixed bug that would reset volume after song change.
+-Enabled the reset option in settings.
+-Fixed bug where shortcuts were intercepting keys in settings menu.

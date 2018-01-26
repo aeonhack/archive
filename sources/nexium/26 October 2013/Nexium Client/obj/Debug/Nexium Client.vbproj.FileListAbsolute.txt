@@ -1,0 +1,13 @@
+C:\Users\Netro\Desktop\aeonhack-nexium-488c952ef76b\Nexium Client\bin\Debug\Nexium Client.exe
+C:\Users\Netro\Desktop\aeonhack-nexium-488c952ef76b\Nexium Client\bin\Debug\Nexium Client.pdb
+C:\Users\Netro\Desktop\aeonhack-nexium-488c952ef76b\Nexium Client\bin\Debug\Nexium Client.xml
+C:\Users\Netro\Desktop\aeonhack-nexium-488c952ef76b\Nexium Client\obj\Debug\UserPreview.resources
+C:\Users\Netro\Desktop\aeonhack-nexium-488c952ef76b\Nexium Client\obj\Debug\AddChannel.resources
+C:\Users\Netro\Desktop\aeonhack-nexium-488c952ef76b\Nexium Client\obj\Debug\MyAccount.resources
+C:\Users\Netro\Desktop\aeonhack-nexium-488c952ef76b\Nexium Client\obj\Debug\Main.resources
+C:\Users\Netro\Desktop\aeonhack-nexium-488c952ef76b\Nexium Client\obj\Debug\Resources.resources
+C:\Users\Netro\Desktop\aeonhack-nexium-488c952ef76b\Nexium Client\obj\Debug\ServerPreview.resources
+C:\Users\Netro\Desktop\aeonhack-nexium-488c952ef76b\Nexium Client\obj\Debug\Nexium Client.vbproj.GenerateResource.Cache
+C:\Users\Netro\Desktop\aeonhack-nexium-488c952ef76b\Nexium Client\obj\Debug\Nexium Client.exe
+C:\Users\Netro\Desktop\aeonhack-nexium-488c952ef76b\Nexium Client\obj\Debug\Nexium Client.xml
+C:\Users\Netro\Desktop\aeonhack-nexium-488c952ef76b\Nexium Client\obj\Debug\Nexium Client.pdb
